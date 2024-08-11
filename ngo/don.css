@@ -1,0 +1,180 @@
+@font-face {
+    font-family: Stardom;
+    src: url(./fonts/Stardom_Complete/Fonts/OTF/Stardom-Regular.otf);
+}
+
+:root {
+    --themeBlue: #209565;
+}
+
+@font-face {
+    font-family: Quilon;
+    src: url(./fonts/Sentient_Complete/Fonts/OTF/Sentient-Medium.otf);
+}
+
+/* Add margin-top: 0; to reset the default margin of the body */
+body {
+    background-image: url('don.jpg');
+    background-size: cover;
+    font-family: Quilon;
+    margin: 0;
+    /* Add this line */
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    height: auto;
+    /* Update with your color */
+    color: #fff;
+    /* Update with your color */
+    font-family: Stardom;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    /* Position the header at the top of the screen */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 0;
+    /* Reset the margin top */
+}
+
+.header-container .logo {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    /* Arrange the logo and text in a column */
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 0;
+    border: 0;
+}
+
+.header-container .logo img {
+    height: 150px;
+    /* Set the height of the logo image */
+    margin-right: 10px;
+    margin-top: -15px;
+}
+
+.header-container .logo .logotext {
+    font-size: 20px;
+    color: rgb(17, 15, 15);
+    margin-top: -20px;
+    /* Adjust the margin-top to position the text below the image */
+}
+
+.header-container nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header-container nav ul li {
+    margin-right: 20px;
+    margin-top: -40px;
+}
+
+.header-container nav ul li:last-child {
+    margin-right: 0;
+}
+
+.header-container nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    /* Update with your color */
+    font-size: 16px;
+    padding: 30px 18px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 20px;
+
+    color: rgb(22, 28, 34);
+    transition: color 0.3s;
+}
+
+.container {
+    max-width: 600px;
+    margin: 180px auto 50px;
+    /* Add margin-top to create space below the fixed header */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.918);
+    border-radius: 10px;
+}
+
+header nav ul li a:hover {
+    background-color: var(--themeBlue);
+}
+
+h2 {
+    font-family: Stardom;
+    color: antiquewhite;
+    font-size: 2rem;
+    line-height: 4.2rem;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+
+
+
+h2 {
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #3498db;
+    /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 19px;
+    /* Rounded edges */
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #2980b9;
+    /* Darker blue on hover */
+}
+
+button:disabled {
+    background-color: #bdc3c7;
+    /* Light gray for disabled */
+    color: #7f8c8d;
+    /* Darker gray text for disabled */
+    cursor: not-allowed;
+}
+
+
+#ngoDetails,
+#branchCity {
+    margin-top: 20px;
+    font-size: 0.9em;
+}

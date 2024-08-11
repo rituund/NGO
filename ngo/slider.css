@@ -1,0 +1,269 @@
+@font-face {
+    font-family: Stardom;
+    src: url(./fonts/Stardom_Complete/Fonts/OTF/Stardom-Regular.otf);
+}
+
+:root {
+    --themeBlue: #209564dc;
+}
+
+body {
+    font-family: Poppins;
+    margin: 0;
+
+    color: #fff;
+}
+
+
+
+header {
+    width: 100%;
+    height: 17%;
+    font-family: Stardom;
+
+    position: relative;
+    z-index: 3;
+
+}
+
+header .container {
+    display: flex;
+    margin-top: 0;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+header .container .logo {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 0;
+    border: 0;
+
+    /* Arrange the logo and text in a column */
+    align-items: center;
+}
+
+header .container .logo .logotext {
+    font-size: 20px;
+    margin-top: -30px;
+
+    color: #fff;
+}
+
+header .container .logo img {
+    height: 150px;
+    margin-top: -25px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+
+
+}
+
+header nav ul li a {
+    margin-top: -30px;
+    /* Adjust the margin-top value */
+    display: inline-block;
+    height: 75px;
+    line-height: 75px;
+    padding: 0 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 20px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+
+header nav ul li a:hover {
+    background-color: var(--themeBlue);
+}
+
+
+.slider {
+    height: 100vh;
+    margin-top: -150px;
+    position: relative;
+    z-index: 1;
+}
+
+.slider .list .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+    opacity: 0.5;
+    transition: .5s;
+}
+
+.slider .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.slider .list .item::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, #000 5%, transparent);
+}
+
+.slider .list .item .content {
+    position: absolute;
+    color: aliceblue;
+    left: 13%;
+    top: 10%;
+    width: 500px;
+    max-width: 50%;
+    z-index: 1;
+
+
+}
+
+.slider .list .item .content p:nth-child(1) {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+
+.slider .list .item .content h2 {
+    font-size: 300%;
+    margin-top: 10px;
+}
+
+.slider .list .item.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h2,
+.slider .list .item.active p:nth-child(3) {
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .3s 0.15s ease-in-out 1 forwards;
+}
+
+.slider .list .item.active h2 {
+    animation-delay: 1s;
+}
+
+.slider .list .item.active p:nth-child(3) {
+    animation-duration: 1.3s;
+}
+
+.arrows {
+    position: absolute;
+    top: 30%;
+    right: 50px;
+    z-index: 200;
+}
+
+.arrows button {
+    background-color: #eee5;
+    border: none;
+    font-family: monospace;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: x-large;
+    color: #eee;
+    transition: .5s;
+}
+
+.arrows button:hover {
+    background-color: #eee;
+    color: black;
+}
+
+.thumbnail {
+    position: absolute;
+    bottom: 5%;
+    z-index: 11;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 35%;
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.thumbnail::-webkit-scrollbar {
+    width: 0;
+}
+
+.thumbnail .item {
+    width: 200px;
+    height: 100%;
+    filter: brightness(.5);
+    transition: .5s;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+.thumbnail .item.active {
+    filter: brightness(1.1);
+}
+
+.thumbnail .item .content {
+    color: rgb(0, 81, 255);
+    position: absolute;
+    inset: auto 10px 10px 10px;
+}
+
+button {
+    margin: 0px 3px;
+    padding: 5px;
+    background-color: rgba(187, 182, 182, 0.404);
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 678px) {
+    .thumbnail {
+        justify-content: start;
+    }
+
+    .slider .list .item.content h2 {
+        font-size: 60px;
+    }
+
+    .arrows {
+        top: 10%;
+    }
+}

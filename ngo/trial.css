@@ -1,0 +1,253 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Stardom;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    position: relative;
+    min-height: 100vh;
+    justify-content: center;
+    min-height: 110vh;
+    background: rgba(88, 88, 88, 0.3);
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .container .nav-logo{
+    height: 150px;
+    display: flex;
+    flex-direction: column; /* Arrange the logo and text in a column */
+    align-items: center;
+    top: 0;
+    padding:0 ;
+    border: 0;
+}
+
+.nav-logo .logotext {
+    font-size: 20px;
+    margin-top: -20px;
+    color: rgb(0, 0, 0); /* Adjust the margin between the logo and text */
+}
+
+header .container .nav-logo img {
+    height: 150px; /* Adjust the height of the logo as needed */
+}
+.nav-button{
+    margin: 50px;
+    display: flex;
+    justify-content: flex-start;
+}
+.nav-button .btn {
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+#RegisterBtn {
+    margin-left: 15px;
+}
+
+.btn.white-btn {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.btn.white-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+.form-box{
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 650px;/* 512px THIS IS CHANGED TO FIT MY LAPTOP */
+    height: 400px;
+    margin: 0 auto;/*  THIS IS NOT IN THE ORIGINAL CODE, MIGHT NOT BE CENTER FOR EVERY SYSTEM  */
+    overflow: hidden;  
+    z-index: 2;
+}
+.register-container {
+    position: absolute;
+    width: 500px;
+    right:-500px; /* Center the container horizontally */
+    top: 50%; /* Center the container vertically */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+    
+    
+}
+
+.login-container {
+    width: 500px;
+    position: absolute;
+    left: 10%; /* Center the container horizontally */
+    top: 50%; /* Center the container vertically */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+
+.top span{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    margin-left: 5px;
+    padding: 10px 0px;
+}
+.top span a{
+    font-weight: 500;
+    color: aliceblue;
+    margin-left: 5px;;
+}
+header{
+    color: aliceblue;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0px 30px 0px;
+    
+}
+.two-forms{
+    display: flex;         
+    
+    gap: 80px;
+    
+}
+.input-field{
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    color: rgb(0, 0, 0);
+    width: 100%;
+    height: 50px;
+    padding: 0px 10px 0px 45px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: .2s ease;
+}
+.input-field:hover, .input-field:focus{
+    background: rgba(255, 255, 255, 0.9);
+}
+
+::-webkit-input-placeholder{
+    color: rgb(0, 0, 0);
+}
+.input-box i{
+position: relative;
+top: -35px;
+margin-bottom: 10px;
+left: 17px;
+color: rgb(255, 255, 255);
+}
+.submit{
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition : .3s ease-in-out ;
+}
+.submit:hover {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 1px 5px 7px 1px rgba(0,0,0,0.9);
+}
+
+.two-col{
+    display: flex;
+    justify-content: space-between;
+    color: aliceblue;
+    font-size: small;
+    margin-top: 10px;
+
+
+}
+.two-col .one{
+display: flex;
+gap: 5px;
+
+}
+.two label a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.two label a:hover{
+    text-decoration: underline;
+}
+
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 780px) {
+    .register-container {
+        
+        display: block;
+        width: 50%;
+        margin-right: 15%; /* Move register container more to the left */
+        margin-bottom: 20px; /* /* Move register container more to the left */
+       
+    }
+
+    .login-container {
+        display: block;
+        width: 50%;
+        margin-top: 20px;
+        margin-left: 15%; /* Move login container more to the right */
+        margin-bottom: 20px; /* Add margin at the bottom to prevent cutoff */
+    }
+}
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 480px) {
+    .form-box {
+        width: 100px; /* Set a smaller width for the form box */
+        height: 150px; /* Set a smaller height for the form box */
+        /* Adjust border size if needed */
+    }
+
+    .register-container {
+        display:flex;
+        width: 30px; /* Set a smaller width for the register container */
+        
+    }
+}

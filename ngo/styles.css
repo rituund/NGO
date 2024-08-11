@@ -1,0 +1,264 @@
+
+@font-face {
+    font-family: Stardom;
+    src: url(./fonts/Stardom_Complete/Fonts/OTF/Stardom-Regular.otf);}
+:root {
+    --themeBlue: #209565;
+}
+
+body {
+    
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    font-family:Stardom;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fullContainer {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+.sectionTitle{
+    top: 20px;
+    width:300px;
+    border-bottom: 3px solid var(--themeBlue);
+    text-align: center;
+    font-weight:200 ;
+    margin:0 auto 50px;
+    position: relative;
+    padding: 10px 0;
+    text-transform:uppercase;
+}
+.sectionTitle::after{
+    
+    position: absolute;
+    
+    border: 3px solid #209565;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    height: 17%;
+    font-family: Stardom;
+    background-color: linear-gradient(#265073);
+    position: fixed;
+    z-index: 2;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+
+header .container .logo {
+    height: 150px;
+    display: flex;
+    flex-direction: column; /* Arrange the logo and text in a column */
+    align-items: center;
+    padding: 0;
+    border: 0;
+    
+}
+
+header .container .logo img {
+    height: 150px;
+
+}header .container .logo .logotext{
+    font-size: 20px;
+    margin-top: -20px;
+    color: rgb(17, 15, 15);
+    
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    display: inline-block;
+    height: 75px;
+    line-height: 95px;
+    padding: 0 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 20px;
+    color: rgb(22, 28, 34);
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: var(--themeBlue);
+}
+
+/* Banner Styles */
+.banner {
+    min-height: 100vh;
+    width: 100%;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    top: 0;
+}
+
+.container > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: antiquewhite;
+    width: 70%;
+}
+
+.banner h1 {
+    font-size: 3.5rem;
+    line-height: 4.2rem;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+button {
+    background-color: var(--themeBlue);
+    color: antiquewhite;
+    padding: 10px 20px;
+    margin:25px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    
+}
+button:hover {
+    transform:translate(-10px);
+    background-color: antiquewhite;
+    color: var(--themeBlue);
+    border: none;
+    
+}
+/* Add these styles to position the content on the about background image */
+/* Add these styles to position the content on the about background image */
+#about {
+    position: relative;
+    overflow: hidden;
+}
+
+#about .container {
+    position: relative;
+    z-index: 2;
+}
+
+#about .container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+    z-index: 1;
+}
+
+#about .sectionTitle {
+    color: antiquewhite;
+    border-bottom: 3px solid #209565;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0 auto 50px;
+    position: relative;
+    padding: 10px 0;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+#about p {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#about .cards {
+    position: relative;
+    padding:40px;
+    z-index: 2;
+    display:flex;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+#about .cards > .card {
+    align-items:flex-end;
+    width: 300px; /* Adjust the width as needed */
+    height: 350px;
+    max-width: 100%; /* Ensure the card doesn't exceed the container width */
+    background-color: rgb(204, 165, 255); /* Adjust the background color and opacity */
+    padding: 20px; /* Adjust the padding as needed */
+    color: black;
+    text-align: center;
+    border-radius: 15px;
+    margin:0 160px ;
+}
+
+#about .cards > .card .title {
+    font-size: 16px; /* Adjust the font size of the title */
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#about .cards > .card p {
+    font-size: 1.2rem; /* Adjust the font size of the paragraph */
+}
+
+#about .cards .card .card-button {
+    background-color: var(--themeBlue);
+    color: antiquewhite;
+    padding: 10px 20px;
+    margin: 25px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+#about .cards .card .card-button:hover {
+    transform:translate(-10px);
+    background-color: antiquewhite;
+    color: var(--themeBlue);
+    
+    
+}
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    #about .cards > .card {
+        width: 100%;
+    }
+}

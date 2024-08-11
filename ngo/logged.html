@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="fullContainer banner" id="home">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="logo.png" alt="Logo">
+                    <h4 class="logotext">ImpactLinK</h4>
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about">About Us</a> <!-- Update href value -->
+                        </li>
+                        <li>
+                            <a href="donation.html">Donation</a> <!-- Update href value -->
+                        </li>
+                        <li>
+                            <a href="slider.html">Activites</a> <!-- Update href value -->
+                        </li>
+                        <li>
+                            <a href="profile.php">Profile</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+            <img src="bg.jpg" alt="Background Image">
+            <div class="banner-content">
+                <h1>Together We Rise: Joining Forces for Lasting Change </h1>
+                <p>---------</p>
+
+            </div>
+        </div>
+    </div>
+    <!-- About Section -->
+    <section class="fullContainer" id="about">
+        <div class="container">
+            <img src="About.jpg" alt="About Us Picture">
+            <div id="about" class="sectionTitle">About Us</div>
+            <p>Welcome to ImpactLink, a beacon of hope and collective action. Committed to forging a united front, we
+                believe in the transformative power of global collaboration...</p>
+
+            <!-- Cards Section -->
+            <div class="cards">
+                <!-- Card 1: Donate Now -->
+                <div class="card">
+                    <div class="title">Give Donation</div>
+                    <p>At ImpactLink, we believe in the power of collective action to bring about positive change. Your
+                        donations play a crucial role in supporting our mission...</p>
+                    <button onclick="donate()" class="card-button">Donate Now!</button>
+                </div>
+
+                <!-- Card 2: Volunteer Now -->
+                <div class="card">
+                    <div class="title">Become A Volunteer</div>
+                    <p>At ImpactLink, we believe that change is possible when individuals come together with a shared
+                        vision of making the world a better place for everyone...</p>
+                    <button onclick="volunteer()" class="card-button">Volunteer Now!</button>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <script>
+        function donate() {
+            window.location.href = 'donation.html'; // Redirect to log.html
+        }
+
+        function volunteer() {
+            window.location.href = 'slider.html';// Add logic for register button if needed
+        }
+        function schlorship() {
+            window.location.href = 'schlorship.html';// Add logic for register button if needed
+        }
+    </script>
+</body>
+
+</html>

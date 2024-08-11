@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="fullContainer banner" id="home">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="logo.png" alt="Logo">
+                    <h4 class="logotext">ImpactLink</h4>
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about">About Us</a> <!-- Update href value -->
+                        </li>
+                        <li>
+                            <a href="trial.php">Donation</a> <!-- Update href value -->
+                        </li>
+                        <li>
+                            <a href="trial.php">Activites</a> <!-- Update href value -->
+                        </li>
+                        <li>
+                            <a href="">Profile</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+            <img src="bg.jpg" alt="Background Image">
+            <div class="banner-content">
+                <h1>Join the Movement for Positive Change </h1>
+
+                <p>---------</p>
+                <button onclick="register()">Register With Us</button>
+                <button onclick="signIn()">Sign In</button>
+            </div>
+        </div>
+    </div>
+    <!-- About Section -->
+    <section class="fullContainer " id="about">
+        <div class="container">
+            <img src="About.jpg" alt="Background Image">
+            <h2 class="sectionTitle">About Us</h2>
+            <p>Welcome to GlobalUnity Alliance, a beacon of hope and collective action. Committed to forging a united
+                front, we believe in the transformative power of global collaboration. Our mission is to foster positive
+                change by bringing together individuals, communities, and organizations from around the world. Through
+                shared values of compassion, empowerment, and sustainability, we strive to create a harmonious and
+                resilient future. Join us in building bridges, breaking barriers, and making a lasting impact on a
+                global scale. Together, we can achieve a world where unity leads to transformative solutions and a
+                brighter tomorrow for all.
+
+            </p>
+
+
+
+        </div>
+    </section>
+    <script>
+        function signIn() {
+            window.location.href = 'trial.php'; // Redirect to log.html
+        }
+
+        function register() {
+            window.location.href = 'trial.php';// Add logic for register button if needed
+        }
+    </script>
+
+</body>
+
+</html>

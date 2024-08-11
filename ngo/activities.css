@@ -1,0 +1,93 @@
+
+@font-face {
+    font-family: Clash;
+    src: url(./fonts/ClashDisplay_Complete/ClashDisplay_Complete/Fonts/OTF/ClashDisplay-Semibold.otf);
+}
+@font-face {
+    font-family: Sentient;
+    src: url(./fonts/Sentient_Complete/Fonts/OTF/Sentient-Regular.otf);
+}*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: #fbeded;
+    /*#b4d46a*/
+}
+
+.title{
+    font-size: 2rem;
+    color:#a8d2e4;
+    padding-top: 40px;
+    text-align: center;
+}
+.aicte{
+    display: inline-block;
+    border-radius: 10px;
+    margin-top: 5px;
+    padding: 8px 6px;
+    font-family:Clash;
+    background-color: rgb(255, 150, 13);
+    font-size: 16px;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.card{
+    width:330px;
+    background-color:#fcfff0c4;
+    margin: 30px;;
+    border-radius: 10px;
+    overflow:hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.9);
+    height: 600px;
+    cursor:pointer;
+    transition:  0.3s ease;
+}
+.card:hover{
+transform: translateY(-25px); 
+}
+.card img{
+    width: 100%;
+    height:auto;
+    
+}
+.card-content{
+    
+    padding: 10px;
+    
+    font-family:Clash;
+}
+.card-content h4{
+    
+    font-size: 20px;
+    margin-bottom: 8px;
+    line-height: 1.2;
+    
+}
+.card-content p{
+    margin-top: 5px;
+    color: #86ac2f;
+    font-size: 18px;
+    line-height: 1.1;
+    font-family: Sentient;
+    
+}
+.card-content .btn{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: rgb(95, 95, 196);
+    border-radius: 6px;
+    margin-top: 15px;
+    color: wheat;
+}
+@media screen and (max-width: 768px){
+    .card-container{
+        flex-direction: column;
+    }
+}
